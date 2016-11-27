@@ -17,6 +17,12 @@
 
 	- youtube-api-search
 
+```javascript
+// embeded
+const videoId = video.id.videoId
+const url = 'https://www.youtube.com/embed/' + videoId
+```
+
 
 ## Component
 
