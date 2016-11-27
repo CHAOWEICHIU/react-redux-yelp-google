@@ -1,7 +1,7 @@
 ## Things included
 
-- Bootstrap V4(CDN)
-- Font-Awesome V4(CDN)
+- Bootstrap V4 (CDN)
+- Font-Awesome V4 (CDN)
 
 ## React Redux Starter
 
