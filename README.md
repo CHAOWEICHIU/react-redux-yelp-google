@@ -50,4 +50,5 @@ const App = ()=>{
 4.componentDidMount()
 
 
-##
+## Container
+-Container is a react component that has direct connection to the state managed by redux
