@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 
 import App from './components/app';
-import Search from './components/search'
+import Search from './containers/search'
 import reducers from './reducers';
 import promiseMiddleware from './middlewares/promise'
 // import logger from './middlewares/logger'
