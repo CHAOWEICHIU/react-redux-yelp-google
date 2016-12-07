@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { GET_CURRENT_LOCATION } from '../actions/types'
 
-const currentLocation = function(state='', action){
+const currentLocation = function(state='Get Current Location', action){
   switch (action.type) {
     case GET_CURRENT_LOCATION:
       let result = action.payload.results[0]

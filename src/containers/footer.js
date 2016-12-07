@@ -6,25 +6,19 @@ import { connect } from 'react-redux'
 class Footer extends Component{
   getLocation(){
     const { getCurrentLocation } = this.props
+    // Get internal latitude, longitude, then call action => getCurrentLocation
     navigator
       .geolocation
       .getCurrentPosition(({coords:{latitude, longitude}})=>
-        getCurrentLocation({latitude, longitude}))
+                getCurrentLocation({latitude, longitude}))
   }
   render(){
-    if(!this.props.currentLocation)return (
-      <nav className="nav navbar-fixed-bottom">
-        <button
-          onClick={this.getLocation.bind(this)}
-          className="btn btn-block active btn-danger sharp custom-header-btn">Get Current Location</button>
-      </nav>
-    )
-
+    let className = 'btn btn-block active btn-danger sharp custom-header-btn'
     return (
       <nav className="nav navbar-fixed-bottom">
       <button
         onClick={this.getLocation.bind(this)}
-        className="btn btn-block active btn-danger sharp custom-header-btn">{this.props.currentLocation}</button>
+        className={className}>{this.props.currentLocation}</button>
       </nav>
     )
   }
