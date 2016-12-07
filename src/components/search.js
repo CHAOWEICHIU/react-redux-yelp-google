@@ -1,6 +1,18 @@
 import React from 'react'
 import Card from './card'
-// TODO import nav buttons
+import Options from './options'
+
+const Search = () => (
+  <div id="search" className="col-lg-6 offset-lg-3">
+    <Card business={business}/>
+    <Options />
+  </div>
+)
+export default Search
+
+
+
+
 
 const business = {
   "is_closed": false,
@@ -37,13 +49,3 @@ const business = {
     }
   ]
 }
-
-
-
-
-const Search = () => (
-  <div id="search" className="col-lg-6 offset-lg-3">
-    <Card business={business}/>
-  </div>
-)
-export default Search

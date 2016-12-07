@@ -22,4 +22,9 @@
 
 #search {
   padding-top: 8em;
+  padding-bottom: 8em;
+}
+
+#options {
+  padding: 2em 2em 2em 2em;
 }
