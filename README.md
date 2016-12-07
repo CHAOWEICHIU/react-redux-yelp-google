@@ -1,54 +1,11 @@
-## Things included
+## Stop Yelp!
 
-- Bootstrap V4 (CDN)
-- Font-Awesome V4 (CDN)
+- Yelp API
 
-## React Redux Starter
+- React
 
-```
-	> npm install
-	> npm start
-```
+- Redux
 
+- Bootstrap V4
 
-## API
-
-- YouTube Data API v3
-
-	- youtube-api-search
-
-```javascript
-// embeded
-const videoId = video.id.videoId
-const url = 'https://www.youtube.com/embed/' + videoId
-```
-
-
-## Component
-
-> functional Component / Dumb Component
-
-```javascript
-const App = ()=>{
-	return <h1>functional component</h1>
-}
-```
-
-## Life Cycle
-
-- Component's state change will trigger
-	-
-	- re-render its own render()
-	- re-render components in this render()
-
-
-## Component Life Cycle
-(Component Life Cycle)[https://facebook.github.io/react/docs/react-component.html]
-1.constructor()
-2.componentWillMount()
-3.render()
-4.componentDidMount()
-
-
-## Container
--Container is a react component that has direct connection to the state managed by redux
+- Font-Awesome

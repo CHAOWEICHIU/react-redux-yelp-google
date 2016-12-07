@@ -6,9 +6,10 @@ import Footer from './footer'
 // TODO add {this.props.children} to return
 // <Header /> // TODO change color // TODO add font-awesome gluphcon to header
 
-const App = () => (
+const App = ({children}) => (
   <div>
     <Header />
+      {children}
     <Footer />
   </div>
 )

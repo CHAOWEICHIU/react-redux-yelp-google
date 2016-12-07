@@ -4,7 +4,7 @@
 }
 
 .custom-header-btn {
-  height: 7em;
+  height: 5em;
   border-radius:0 0 0 0;
   border-radius: 0;
 }
@@ -18,4 +18,8 @@
 }
 .fa.fa-heart{
   padding-top: 0.1em;
+}
+
+#search {
+  padding-top: 8em;
 }

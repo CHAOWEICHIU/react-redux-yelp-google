@@ -4,12 +4,12 @@ import { Link } from 'react-router'
 const navs = [
   {
     name:'search',
-    icon:'fa fa-search fa-5x',
+    icon:'fa fa-search fa-3x',
     class: 'btn btn-danger active btn-block sharp custom-header-btn'
   },
   {
     name:'collection',
-    icon:'fa fa-heart fa-5x',
+    icon:'fa fa-heart fa-3x',
     class: 'btn btn-danger active btn-block sharp custom-header-btn'
   }
 ]
