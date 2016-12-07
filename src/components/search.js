@@ -10,10 +10,6 @@ const Search = () => (
 )
 export default Search
 
-
-
-
-
 const business = {
   "is_closed": false,
   "id": "selden-standard-detroit",
