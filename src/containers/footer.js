@@ -12,19 +12,28 @@ class Footer extends Component{
         getCurrentLocation({latitude, longitude}))
   }
   render(){
-    console.log(this.props)
-    return (
+    if(!this.props.currentLocation)return (
       <nav className="nav navbar-fixed-bottom">
         <button
           onClick={this.getLocation.bind(this)}
           className="btn btn-block active btn-danger sharp custom-header-btn">Get Current Location</button>
       </nav>
     )
+
+    return (
+      <nav className="nav navbar-fixed-bottom">
+      <button
+        onClick={this.getLocation.bind(this)}
+        className="btn btn-block active btn-danger sharp custom-header-btn">{this.props.currentLocation}</button>
+      </nav>
+    )
   }
 }
+
 function mapStateToProps(state){
   return {
     currentLocation: state.currentLocation
   }
 }
+
 export default connect(mapStateToProps, { getCurrentLocation })(Footer)
