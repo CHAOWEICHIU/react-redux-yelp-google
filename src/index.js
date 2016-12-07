@@ -6,11 +6,25 @@ import { createStore, applyMiddleware } from 'redux';
 import App from './components/app';
 import reducers from './reducers';
 
+import { Router, Route, hashHistory, IndexRoute } from 'react-router'
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-const store = createStore(reducers ,composeEnhancers(applyMiddleware(logger)))
+const store = createStore(reducers ,composeEnhancers(applyMiddleware()))
+
+
+const Location = () => <div>Need to access currentl location</div>
+const Search = () => <div>Search</div>
+const Collection = () => <div>Collection</div>
+
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router history={hashHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Location} />
+        <Route path="search" component={Search} />
+        <Route path="collection" component={Collection} />
+      </Route>
+    </Router>
   </Provider>
-  , document.querySelector('.container'));
+  , document.querySelector('#root'));
