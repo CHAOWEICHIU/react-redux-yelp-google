@@ -1,19 +1,23 @@
 {
-  "name": "yelp-start",
+  "name": "stop-yelp",
   "version": "1.0.0",
-  "description": "go yelp yelp",
-  "main": "index.js",
-  "repository": "https://github.com/CHAOWEICHIU/react-starter.git",
-  "scripts": {
-    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "postinstall":"./node_modules/.bin/webpack -g",
-    "start":"node server.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch",
-    "push": "git add . && git commit -m 'Edited README' && git push origin master"
+  "description": "yelp-api google-api redux react",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
   },
-  "author": "chao wei chiu",
-  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "webpack": "^1.12.9",
+    "babel-preset-stage-1": "^6.1.18",
+    "lodash": "^3.10.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-redux": "^4.0.0",
+    "react-router": "^2.8.1",
+    "redux": "^3.0.4",
+    "express":"^4.14.0"
+  },
   "devDependencies": {
     "babel-core": "^6.2.1",
     "babel-loader": "^6.2.0",
@@ -27,16 +31,29 @@
     "react-addons-test-utils": "^0.14.7",
     "webpack-dev-server": "^1.14.0"
   },
-  "dependencies": {
-    "axios": "^0.15.3",
-    "webpack": "^1.12.9",
-    "babel-preset-stage-1": "^6.1.18",
-    "lodash": "^3.10.1",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "react-redux": "^4.0.0",
-    "react-router": "^2.8.1",
-    "redux": "^3.0.4",
-    "express":"^4.14.0"
-  }
+  "scripts": {
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "postinstall":"./node_modules/.bin/webpack -g",
+    "start":"node server.js",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "test:watch": "npm run test -- --watch",
+    "push": "git add . && git commit -m 'Edited README' && git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CHAOWEICHIU/react-redux-yelp-google.git"
+  },
+  "keywords": [
+    "yelp",
+    "api",
+    "goolge",
+    "react",
+    "redux"
+  ],
+  "author": "chao wei chiu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CHAOWEICHIU/react-redux-yelp-google/issues"
+  },
+  "homepage": "https://github.com/CHAOWEICHIU/react-redux-yelp-google#readme"
 }
