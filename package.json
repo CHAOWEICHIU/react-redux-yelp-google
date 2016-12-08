@@ -33,7 +33,7 @@
   },
   "scripts": {
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "postinstall":"webpack --config webpack.config.prod.js -p",
+    "postinstall":"./node_modules/.bin/webpack --config webpack.config.prod.js -p",
     "start":"node server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
