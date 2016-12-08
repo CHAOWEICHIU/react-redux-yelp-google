@@ -1,7 +1,7 @@
 {
-  "name": "redux-simple-starter",
+  "name": "yelp-start",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "go yelp yelp",
   "main": "index.js",
   "repository": "https://github.com/CHAOWEICHIU/react-starter.git",
   "scripts": {
@@ -36,6 +36,7 @@
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
     "react-router": "^2.8.1",
-    "redux": "^3.0.4"
+    "redux": "^3.0.4",
+    "express":"^4.14.0"
   }
 }
