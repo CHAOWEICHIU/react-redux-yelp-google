@@ -15,7 +15,7 @@ const Card = ({business:{name, categories, phone, image_url ,distance,location:{
         <a className="list-group-item bg-inverse" href="/">
           {address1} {city}, {state} {zip_code}
         </a>
-        <a className="list-group-item bg-inverse" href="/">Call {phone}</a>
+        <a className="list-group-item bg-inverse" href="/">Call: {phone}</a>
       </ul>
     </div>
     <div className="card-footer text-muted bg-inverse">
