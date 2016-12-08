@@ -3,7 +3,7 @@ import Card from '../components/card'
 import Options from '../components/options'
 import { connect } from 'react-redux'
 import { addOne, saveToCollection } from '../actions'
-import FilterForm from '../components/filteR_form'
+import FilterForm from './filter_form'
 
 class Search extends Component {
   render(){

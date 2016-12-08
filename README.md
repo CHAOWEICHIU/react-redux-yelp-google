@@ -12,3 +12,8 @@
 - Bootstrap V4
 
 - Font-Awesome
+
+- redux-form
+
+  - normalize
+  - normalizePhone

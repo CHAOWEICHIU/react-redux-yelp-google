@@ -12,11 +12,6 @@ class Footer extends Component{
       .getCurrentPosition(({coords:{latitude, longitude}})=>
                 getCurrentLocation({latitude, longitude}))
   }
-  componentDidUpdate(){
-    if(this.props.currentLocation && this.props.places.length === 0){
-      this.props.fetchPlaces({term:'coffee', location:this.props.currentLocation})
-    }
-  }
   render(){
     let className = 'btn btn-block active btn-danger sharp custom-header-btn'
     return (
