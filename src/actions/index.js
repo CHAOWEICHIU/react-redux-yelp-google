@@ -17,7 +17,7 @@ export const addOne = () => ({
 })
 
 
-export function getCurrentLocation({latitude, longitude}){
+export const getCurrentLocation = ({latitude, longitude}) => {
   const ROOT_URL = 'https://maps.googleapis.com/maps/api/geocode/json?'
       , KEY = 'AIzaSyBfF1EwJGIk3iq8UgcMxXVvWmy3JQrCuXA'
       , promise = axios.get(`${ROOT_URL}latlng=${latitude},${longitude}&key=${KEY}`)
