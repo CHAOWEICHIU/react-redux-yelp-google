@@ -28,7 +28,6 @@ export const getCurrentLocation = ({latitude, longitude}) => {
 }
 
 export const fetchPlaces = ({term='', radius=''}, currentLocation)=>{
-  
   const ROOT_URL = 'https://ccw-data-center.herokuapp.com/yelp/businesses/search?'
       , queryString = qs.stringify({
           term,
