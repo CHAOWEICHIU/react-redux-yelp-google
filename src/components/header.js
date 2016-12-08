@@ -25,7 +25,7 @@ const Header = () => (
 const renderNavs = navs => navs.map(nav=>(
   <div className="col-xs-6" key={nav.name}>
     <Link to={nav.name} className={nav.class}>
-      <i className={nav.icon}></i>
+      <i className={nav.icon} style={{color:'white'}}></i>
     </Link>
   </div>
 ))
