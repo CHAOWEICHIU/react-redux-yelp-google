@@ -2,10 +2,10 @@ import React from 'react'
 
 // TODO open google map for address
 
-const Card = ({business:{name, categories, phone, distance,location:{address1, city, state, zip_code}}}) => (
-  <section className="col-xs-12">
+const Card = ({business:{name, categories, phone, image_url ,distance,location:{address1, city, state, zip_code}}}) => (
+  <section id="card" className="col-xs-12">
     <div className="card text-xs-center bg-inverse">
-    <img className="img-fluid" src="https://cambodiapackagetravel.com/wp-content/uploads/2016/02/938_1_02_coffeeshop01.jpg" />
+    <img className="img-fluid" src={image_url} />
     <div className="card-block">
       <a href="/"><h2 className="card-title text-white">{name}</h2></a>
       <ul className="list-group">

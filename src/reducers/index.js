@@ -49,7 +49,8 @@ const collection = function(state=[], action){
 const rootReducer = combineReducers({
   currentLocation,
   places,
-  activeNum
+  activeNum,
+  collection
 });
 
 export default rootReducer;

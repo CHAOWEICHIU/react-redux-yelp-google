@@ -1,21 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
 
-import App from './components/app';
+import App from './components/app'
 import Search from './containers/search'
-import reducers from './reducers';
+import Collection from './containers/collection'
+import reducers from './reducers'
 import promiseMiddleware from './middlewares/promise'
-// import logger from './middlewares/logger'
-
 
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(reducers ,composeEnhancers(applyMiddleware(promiseMiddleware)))
-
-const Collection = () => <div>Collection</div>
 
 
 ReactDOM.render(
@@ -27,4 +24,4 @@ ReactDOM.render(
       </Route>
     </Router>
   </Provider>
-  , document.querySelector('#root'));
+  , document.querySelector('#root'))

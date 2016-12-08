@@ -15,7 +15,7 @@ class Search extends Component {
     }
     const { places, activeNum, addOne, saveToCollection } = this.props
     return (
-      <div id="search" className="col-lg-6 offset-lg-3">
+      <div id="search" className="row col-lg-6 offset-lg-3">
         <Card business={places[activeNum]}/>
         <Options
           addOne={addOne}

@@ -13,14 +13,17 @@
   border-radius:0;
 }
 
-.fa.fa-search{
-  padding-top: 0.1em;
-}
-.fa.fa-heart{
-  padding-top: 0.1em;
+#search {
+  padding-top: 6em;
+  margin-bottom: 6em;
 }
 
-#search {
-  padding-top: 8em;
-  padding-bottom: 8em;
+#collection{
+  padding-top: 6em;
+  margin-bottom: 5em;
+}
+
+#card {
+  padding-top: 0.5em;
+  padding-bottom: 1em;
 }
