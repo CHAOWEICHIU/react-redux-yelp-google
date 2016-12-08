@@ -19,7 +19,7 @@ const Card = ({business:{name, categories, phone, distance,location:{address1, c
       </ul>
     </div>
     <div className="card-footer text-muted bg-inverse">
-      Distance {distance}
+      Distance {(distance * 0.00062137).toFixed(1)} miles
     </div>
     </div>
   </section>

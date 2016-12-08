@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
 import {
   GET_CURRENT_LOCATION,
-  FETCH_PLACES
+  FETCH_PLACES,
+  ADD_ONE
 } from '../actions/types'
 
 const currentLocation = function(state='Get Current Location', action){
@@ -11,6 +12,15 @@ const currentLocation = function(state='Get Current Location', action){
         , locationCity = result.address_components[2].long_name
         , locationState = result.address_components[3].short_name
       return `${locationCity}, ${locationState}`
+    default:
+      return state
+  }
+}
+
+const activeNum = function(state=0,action){
+  switch (action.type) {
+    case ADD_ONE:
+      return state + 1
     default:
       return state
   }
@@ -27,7 +37,8 @@ const places = function(state=[], action){
 
 const rootReducer = combineReducers({
   currentLocation,
-  places
+  places,
+  activeNum
 });
 
 export default rootReducer;

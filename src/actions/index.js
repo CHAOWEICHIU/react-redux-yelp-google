@@ -1,9 +1,15 @@
 import axios from 'axios'
 import {
   GET_CURRENT_LOCATION,
-  FETCH_PLACES
+  FETCH_PLACES,
+  ADD_ONE
 } from './types'
 
+export function addOne(){
+  return {
+    type: ADD_ONE
+  }
+}
 
 export function getCurrentLocation({latitude, longitude}){
   const ROOT_URL = 'https://maps.googleapis.com/maps/api/geocode/json?'
