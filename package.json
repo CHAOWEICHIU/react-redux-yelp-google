@@ -41,6 +41,7 @@
     "refactor": "git add . && git commit -m 'refactor'",
     "commit": "git add . && git commit -m 'Heroku config' && git push origin master",
     "postinstall":"webpack --config webpack.prod.config.js -p",
+    "logs":"heroku logs --app stop-yelp",
     "start": "node server.js"
   },
   "repository": {
