@@ -9,13 +9,14 @@
   "dependencies": {
     "axios": "^0.15.3",
     "babel-preset-stage-1": "^6.1.18",
+    "express": "^4.14.0",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
     "react-router": "^2.8.1",
     "redux": "^3.0.4",
-    "express":"^4.14.0"
+    "redux-form": "^6.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.2.1",
@@ -36,8 +37,8 @@
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
     "push": "webpack --config webpack.prod.config.js -p && npm run commit",
-    "commit":"git add . && git commit -m 'Heroku config' && git push origin master",
-    "start":"node server.js"
+    "commit": "git add . && git commit -m 'Heroku config' && git push origin master",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

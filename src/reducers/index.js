@@ -6,6 +6,8 @@ import {
   SAVE_TO_COLLECTION
 } from '../actions/types'
 
+import { reducer as formReducer } from 'redux-form'
+
 const currentLocation = function(state='Get Current Location', action){
   switch (action.type) {
     case GET_CURRENT_LOCATION:
@@ -50,7 +52,8 @@ const rootReducer = combineReducers({
   currentLocation,
   places,
   activeNum,
-  collection
+  collection,
+  form:formReducer
 });
 
 export default rootReducer;
