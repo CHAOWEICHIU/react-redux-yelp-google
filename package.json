@@ -40,6 +40,7 @@
     "push": "webpack --config webpack.prod.config.js -p && npm run commit",
     "refactor": "git add . && git commit -m 'refactor'",
     "commit": "git add . && git commit -m 'Heroku config' && git push origin master",
+    "postinstall":"webpack --config webpack.prod.config.js -p",
     "start": "node server.js"
   },
   "repository": {
