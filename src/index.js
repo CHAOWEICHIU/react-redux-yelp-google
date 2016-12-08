@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider, compose } from 'react-redux'
-import { createStore, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 
 import App from './components/app'
 import Search from './containers/search'
