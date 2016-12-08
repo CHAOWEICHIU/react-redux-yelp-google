@@ -7,19 +7,15 @@ import {
 } from './types'
 import qs from 'qs'
 
-export function saveToCollection(place){
-  console.log('action creator=>',place)
-  return {
-    type: SAVE_TO_COLLECTION,
-    payload: place
-  }
-}
+export const saveToCollection = place => ({
+  type: SAVE_TO_COLLECTION,
+  payload: place
+})
 
-export function addOne(){
-  return {
+export const addOne = () => ({
     type: ADD_ONE
-  }
-}
+})
+
 
 export function getCurrentLocation({latitude, longitude}){
   const ROOT_URL = 'https://maps.googleapis.com/maps/api/geocode/json?'

@@ -17,3 +17,6 @@
 
   - normalize
   - normalizePhone
+
+
+TDD
