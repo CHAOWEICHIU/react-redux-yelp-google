@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Card from '../components/card'
-import Options from './options'
+import Options from '../components/options'
 import { connect } from 'react-redux'
+import { addOne, saveToCollection } from '../actions'
 
 class Search extends Component {
   render(){
@@ -12,10 +13,14 @@ class Search extends Component {
         </div>
       )
     }
+    const { places, activeNum, addOne, saveToCollection } = this.props
     return (
       <div id="search" className="col-lg-6 offset-lg-3">
-        <Card business={this.props.places[0]}/>
-        <Options />
+        <Card business={places[activeNum]}/>
+        <Options
+          addOne={addOne}
+          saveToCollection={saveToCollection}
+          place={places[activeNum]}/>
       </div>
     )
   }
@@ -24,7 +29,8 @@ class Search extends Component {
 
 function mapStateToProps(state){
   return {
-    places: state.places
+    places: state.places,
+    activeNum: state.activeNum
   }
 }
-export default connect(mapStateToProps)(Search)
+export default connect(mapStateToProps, { addOne, saveToCollection })(Search)

@@ -2,8 +2,17 @@ import axios from 'axios'
 import {
   GET_CURRENT_LOCATION,
   FETCH_PLACES,
-  ADD_ONE
+  ADD_ONE,
+  SAVE_TO_COLLECTION
 } from './types'
+
+export function saveToCollection(place){
+  console.log('action creator=>',place)
+  return {
+    type: SAVE_TO_COLLECTION,
+    payload: place
+  }
+}
 
 export function addOne(){
   return {

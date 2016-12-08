@@ -2,7 +2,8 @@ import { combineReducers } from 'redux';
 import {
   GET_CURRENT_LOCATION,
   FETCH_PLACES,
-  ADD_ONE
+  ADD_ONE,
+  SAVE_TO_COLLECTION
 } from '../actions/types'
 
 const currentLocation = function(state='Get Current Location', action){
@@ -30,6 +31,16 @@ const places = function(state=[], action){
   switch (action.type) {
     case FETCH_PLACES:
       return [...state, ...action.payload.businesses]
+    default:
+      return state
+  }
+}
+
+const collection = function(state=[], action){
+  switch (action.type) {
+    case SAVE_TO_COLLECTION:
+      console.log('hit!')
+      return [...state, {...action.payload}]
     default:
       return state
   }
