@@ -3,8 +3,12 @@ const express = require('express')
     , path = require('path')
     , PORT = process.env.PORT || 8080
 
-app.use('/public', express.static(path.join(__dirname, '../public')))
-app.get('/', function (_, res) { res.sendFile(path.join(__dirname, '/../index.html')) })
+
+app.use(express.static('public'))
+app.get('/', (req, res)=> {
+  res.sendFile(path.join(__dirname + '/index.html'))
+})
+
 
 
 app.listen(PORT)
