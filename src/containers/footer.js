@@ -6,12 +6,8 @@ import { connect } from 'react-redux'
 class Footer extends Component{
   constructor(props){
     super(props)
-    this.state = {
-      waitingBtn : false
-    }
   }
   getLocation(){
-    this.setState({waitingBtn:true})
     const { getCurrentLocation } = this.props
     // Get internal latitude, longitude, then call action => getCurrentLocation
     navigator
@@ -19,16 +15,12 @@ class Footer extends Component{
       .getCurrentPosition(({coords:{latitude, longitude}})=>
                 getCurrentLocation({latitude, longitude}))
   }
-  componentDidUpdate(){
-    this.setState({waitingBtn : true})
-  }
   render(){
     const { currentLocation } = this.props
     let className = 'btn btn-block active btn-danger sharp custom-header-btn'
     return (
       <nav className="nav navbar-fixed-bottom">
       <button
-        disabled={this.state.waitingBtn}
         onClick={this.getLocation.bind(this)}
         className={className}>
           {currentLocation}
