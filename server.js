@@ -1,7 +1,7 @@
 const express = require('express')
     , app = express()
     , path = require('path')
-    , PORT = process.env.PORT || 8080
+    , PORT = process.env.PORT || 3000
 
 app.use(express.static('public'))
 app.get('/', (req, res)=> {
