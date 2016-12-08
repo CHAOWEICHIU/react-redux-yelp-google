@@ -32,12 +32,12 @@
     "webpack-dev-server": "^1.14.0"
   },
   "scripts": {
-    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline",
     "postinstall":"./node_modules/.bin/webpack --config webpack.prod.config.js -p",
     "start":"node server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
-    "push": "git add . && git commit -m 'Edited README' && git push origin master"
+    "push": "git add . && git commit -m 'Heroku config' && git push origin master"
   },
   "repository": {
     "type": "git",

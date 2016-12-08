@@ -5,13 +5,13 @@ module.exports = {
   devtool: 'source-map',
 
   entry: [
-    __dirname + './src/index'
+    './src/index'
   ],
 
   output: {
-    path: __dirname,
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/public/'
   },
 
   plugins: [
