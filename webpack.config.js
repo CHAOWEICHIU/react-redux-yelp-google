@@ -5,9 +5,9 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    path: path.join(__dirname, 'public'),
+    path: path.join(__dirname, '/public'),
     filename: 'bundle.js',
-    publicPath: '/public/'
+    publicPath: '/'
   },
   module: {
     loaders: [{
@@ -24,6 +24,7 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     historyApiFallback: true,
-    contentBase: './public'
+    contentBase: './public',
+    colors: true
   }
 }

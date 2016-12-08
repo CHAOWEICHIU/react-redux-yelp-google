@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import Card from '../components/card'
 
 const Collection = props => {
-  console.log('?',props)
   if(!props.collection)return <div id="collection">NO!!!!</div>
   return (
     <div id="collection" className="col-lg-6 offset-lg-3 row">

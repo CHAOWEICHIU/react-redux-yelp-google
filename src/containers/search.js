@@ -3,13 +3,14 @@ import Card from '../components/card'
 import Options from '../components/options'
 import { connect } from 'react-redux'
 import { addOne, saveToCollection } from '../actions'
+import FilterForm from '../components/filteR_form'
 
 class Search extends Component {
   render(){
     if(this.props.places.length===0){
       return (
         <div id="search" className="col-lg-6 offset-lg-3">
-          <div>Get started!</div>
+          <FilterForm />
         </div>
       )
     }

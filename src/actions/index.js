@@ -31,8 +31,8 @@ export function getCurrentLocation({latitude, longitude}){
 }
 
 export function fetchPlaces({term, location}){
-  const ROOT_URL = 'http://localhost:3000/yelp/businesses/search?'
-      , promise = axios.get(`${ROOT_URL}term=${term}&location=${location}`)
+  const ROOT_URL = 'https://ccw-data-center.herokuapp.com/yelp/businesses/search?'
+      , promise = axios.get(`${ROOT_URL}&location=${location}`)
   return {
       type: FETCH_PLACES,
       payload: promise
