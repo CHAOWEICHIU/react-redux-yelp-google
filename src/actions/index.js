@@ -16,7 +16,6 @@ export const addOne = () => ({
     type: ADD_ONE
 })
 
-
 export const getCurrentLocation = ({latitude, longitude}) => {
   const ROOT_URL = 'https://maps.googleapis.com/maps/api/geocode/json?'
       , KEY = 'AIzaSyBfF1EwJGIk3iq8UgcMxXVvWmy3JQrCuXA'
