@@ -27,7 +27,8 @@ export const getCurrentLocation = ({latitude, longitude}) => {
   }
 }
 
-export function fetchPlaces({term, radius}, currentLocation){
+export const fetchPlaces = ({term='', radius=''}, currentLocation)=>{
+  
   const ROOT_URL = 'https://ccw-data-center.herokuapp.com/yelp/businesses/search?'
       , queryString = qs.stringify({
           term,
@@ -35,8 +36,6 @@ export function fetchPlaces({term, radius}, currentLocation){
           location: currentLocation
         })
       , promise = axios.get(`${ROOT_URL}${queryString}`)
-      console.log('qs',queryString)
-      console.log('url=>',`${ROOT_URL}${queryString}`)
   return {
       type: FETCH_PLACES,
       payload: promise

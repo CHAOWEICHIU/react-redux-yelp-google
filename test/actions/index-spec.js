@@ -4,14 +4,17 @@ import axios from 'axios'
 import {
   SAVE_TO_COLLECTION,
   ADD_ONE,
-  GET_CURRENT_LOCATION
+  GET_CURRENT_LOCATION,
+  FETCH_PLACES
  } from '../../src/actions/types'
 
 describe('action creators', ()=>{
-  let input, output
+  let input, output, promise
+
   beforeEach(()=>{
     input = ''
     output = ''
+    promise = ''
   })
 
   it('saveToCollection()', ()=>{
@@ -31,7 +34,7 @@ describe('action creators', ()=>{
 
   it('getCurrentLocation() return a promise', ()=>{
     input = actions.getCurrentLocation({latitude:22, longitude:22})
-    let promise = axios.get('http://promise.com')
+    promise = axios.get('http://promise.com')
     output = {
       type: GET_CURRENT_LOCATION,
       payload: promise
@@ -48,5 +51,28 @@ describe('action creators', ()=>{
         done()
       })
   })
+
+  it('fetchPlaces()', ()=>{
+    input = actions.fetchPlaces({term:'coffee', radius:4000})
+    promise = axios.get('http://promise.com')
+    output = {
+      type: FETCH_PLACES,
+      payload: promise
+    }
+    expect(input).to.eql(output)
+  })
+
+  it('fetchPlaces() will return 200 and 50 businesses', (done)=>{
+    actions.fetchPlaces({radius:4000})
+      .payload
+      .then(res=>{
+        expect(res.status).to.equal(200)
+        expect(res.data.businesses.length).to.equal(50)
+        done()
+      })
+  })
+
+  
+
 
 })
