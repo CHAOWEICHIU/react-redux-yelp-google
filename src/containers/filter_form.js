@@ -5,10 +5,12 @@ import { fetchPlaces } from '../actions'
 
 const renderInput = field => {
   return (
-  <div>
-    <label>{field.placeholder}</label>
-    <input {...field.input} />
-    {field.meta.error && field.meta.touched && <span>{field.meta.error}</span>}
+  <div className="form-group">
+    <input className="form-control form-control-lg" {...field.input} placeholder={field.name}/>
+    { field.meta.error && field.meta.touched &&
+      <div className="alert alert-danger">
+        <span>{field.meta.error}</span>
+      </div> }
   </div>
 )}
 
@@ -23,14 +25,25 @@ const validate = values => {
 }
 
 const radiusCheck = num => !isNaN(num) ? num : ''
-
+const hasCurrentLocation = currentLocation => currentLocation === 'Get Current Location' ? true : false
 
 const FilterForm = ({handleSubmit, invalid, submitting, fetchPlaces, currentLocation }) => {
   return (
   <form onSubmit={handleSubmit(data=>fetchPlaces(data, currentLocation))}>
-    <Field name="term" component={renderInput} placeholder="Term" />
-    <Field normalize={radiusCheck} name="radius" component={renderInput} placeholder="Radius" />
-    <button type="sumbit">sumbit</button>
+    <Field name="term"
+      component={renderInput}
+      placeholder="Term" />
+
+    <Field name="radius"
+      normalize={radiusCheck}
+      component={renderInput}
+      placeholder="Radius" />
+
+    <button type="sumbit"
+      disabled={hasCurrentLocation(currentLocation)}
+      className="btn btn-block btn-lg">
+        {hasCurrentLocation(currentLocation)? 'Get Location First' : 'Submit'}
+      </button>
   </form>
 )}
 

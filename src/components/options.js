@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 class Options extends Component{
   onYesClick(){
     this.props.saveToCollection(this.props.place)
-    console.log('yes', this.props.place)
     this.props.addOne()
   }
   onNoClick(){
