@@ -26,10 +26,10 @@ const validate = values => {
 
 const radiusCheck = num => !isNaN(num) ? num : ''
 
-const disableCondition = (){
-  //  condition 1 !currentLocation,
-  //  submitting 
-}
+// const disableCondition = (){
+//   //  condition 1 !currentLocation,
+//   //  submitting
+// }
 
 const FilterForm = ({handleSubmit, invalid, submitting, fetchPlaces, currentLocation, anyTouched, places, submitSucceeded }) => {
   console.log('submmiting',submitting, places)
