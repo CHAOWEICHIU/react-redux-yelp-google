@@ -11,7 +11,7 @@ describe('current location reducer', ()=>{
 
   it('should handle init state', ()=>{
     input = reducer(undefined, {})
-    output = 'Get Current Location'
+    output = ''
     expect(input).to.equal(output)
   })
   it('should handle GET_CURRENT_LOCATION', ()=>{

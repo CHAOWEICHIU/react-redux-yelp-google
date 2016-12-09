@@ -1,6 +1,6 @@
 import { GET_CURRENT_LOCATION } from '../actions/types'
 
-export default (state='Get Current Location', action)=>{
+export default (state='', action)=>{
   switch (action.type) {
     case GET_CURRENT_LOCATION:
       let result = action.payload.results[0]

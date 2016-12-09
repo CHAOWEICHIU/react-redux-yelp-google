@@ -7,9 +7,8 @@ class Footer extends Component{
   constructor(props){
     super(props)
   }
-  getLocation(){
+  componentWillMount(){
     const { getCurrentLocation } = this.props
-    // Get internal latitude, longitude, then call action => getCurrentLocation
     navigator
       .geolocation
       .getCurrentPosition(({coords:{latitude, longitude}})=>
@@ -21,7 +20,6 @@ class Footer extends Component{
     return (
       <nav className="nav navbar-fixed-bottom">
       <button
-        onClick={this.getLocation.bind(this)}
         className={className}>
           {currentLocation}
         </button>
@@ -30,11 +28,5 @@ class Footer extends Component{
   }
 }
 
-function mapStateToProps(state){
-  return {
-    currentLocation: state.currentLocation,
-    places: state.places
-  }
-}
-
+const mapStateToProps = ({currentLocation, places}) => ({currentLocation, places})
 export default connect(mapStateToProps, { getCurrentLocation })(Footer)
