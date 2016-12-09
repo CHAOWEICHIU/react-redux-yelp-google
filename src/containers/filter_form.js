@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
 import { fetchPlaces } from '../actions'
+import LocationButton from './get_location_button'
 
 const renderInput = field => {
   return (
@@ -44,6 +45,8 @@ const FilterForm = ({handleSubmit, invalid, submitting, fetchPlaces, currentLoca
       className="btn btn-block btn-lg">
         {hasCurrentLocation(currentLocation)? 'Get Location First' : 'Submit'}
       </button>
+
+    <LocationButton />
   </form>
 )}
 

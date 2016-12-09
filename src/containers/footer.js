@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { getCurrentLocation, fetchPlaces } from '../actions'
+import { getCurrentLocation } from '../actions'
 import { connect } from 'react-redux'
 
 class Footer extends Component{
@@ -37,4 +37,4 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps, { getCurrentLocation, fetchPlaces })(Footer)
+export default connect(mapStateToProps, { getCurrentLocation })(Footer)
