@@ -26,12 +26,6 @@ class Search extends Component {
     )
   }
 }
-// if(!this.props.places)return <div>Get started!</div>
 
-function mapStateToProps(state){
-  return {
-    places: state.places,
-    activeNum: state.activeNum
-  }
-}
+const mapStateToProps = ({places, activeNum}) => ({places, activeNum})
 export default connect(mapStateToProps, { addOne, saveToCollection })(Search)

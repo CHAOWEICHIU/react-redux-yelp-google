@@ -7,7 +7,7 @@ const renderInput = field => {
   return (
   <div className="form-group">
     <input className="form-control form-control-lg" {...field.input} placeholder={`${field.name} (optional)`}/>
-    { field.meta.error && field.meta.touched &&
+    { field.meta.error && field.meta.visited &&
       <div className="alert alert-danger">
         <span>{field.meta.error}</span>
       </div> }
@@ -16,7 +16,7 @@ const renderInput = field => {
 
 const validate = values => {
   const errors = {}
-  if(values.radius >= 4000){
+  if(values.radius > 4000){
     errors.radius = 'Max is 4000'
   } else if (values.radius <= 0) {
     errors.radius = 'Min is 0'
@@ -26,7 +26,13 @@ const validate = values => {
 
 const radiusCheck = num => !isNaN(num) ? num : ''
 
-const FilterForm = ({handleSubmit, invalid, submitting, fetchPlaces, currentLocation }) => {
+const disableCondition = (){
+  //  condition 1 !currentLocation,
+  //  submitting 
+}
+
+const FilterForm = ({handleSubmit, invalid, submitting, fetchPlaces, currentLocation, anyTouched, places, submitSucceeded }) => {
+  console.log('submmiting',submitting, places)
   return (
   <form onSubmit={handleSubmit(data=>fetchPlaces(data, currentLocation))}>
     <Field name="term"
@@ -43,19 +49,14 @@ const FilterForm = ({handleSubmit, invalid, submitting, fetchPlaces, currentLoca
       className="btn btn-block btn-lg">
         {!currentLocation ? 'Loading current location ...' : 'Submit'}
       </button>
+
   </form>
 )}
-
 
 const FilterFormWithRedux = reduxForm({
   form: 'filter_form',
   validate
 })(FilterForm)
 
-function mapStateToProps(state){
-  return {
-    currentLocation: state.currentLocation
-  }
-}
-
+const mapStateToProps = ({currentLocation, places}) => ({currentLocation,places})
 export default connect(mapStateToProps,{ fetchPlaces })(FilterFormWithRedux)

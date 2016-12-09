@@ -23,5 +23,4 @@ import reducer from '../../src/reducers/places'
      output = ['a','a','b','c']
      expect(input).to.eql(output)
    })
-
  })

@@ -11,10 +11,6 @@ const Collection = props => {
   )
 }
 
-function mapStateToProps(state){
-  return {
-    collection: state.collection
-  }
-}
+const mapStateToProps = ({collection}) => ({collection})
 
 export default connect(mapStateToProps)(Collection)
