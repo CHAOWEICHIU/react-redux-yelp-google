@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
 import { fetchPlaces } from '../actions'
+import store from '../store'
 
 const renderInput = field => {
   return (
@@ -29,12 +30,18 @@ const radiusCheck = num => !isNaN(num) ? num : ''
 // const disableCondition = (){
 //   //  condition 1 !currentLocation,
 //   //  submitting
+//   if return is 0
 // }
 
+// TODO disableCondition  ()
+
+// TODO submitSucceeded && return ==== 0
+
 const FilterForm = ({handleSubmit, invalid, submitting, fetchPlaces, currentLocation, anyTouched, places, submitSucceeded }) => {
-  console.log('submmiting',submitting, places)
+  console.log(store.getState())
+  if(submitSucceeded)return <div>Loading...</div>
   return (
-  <form onSubmit={handleSubmit(data=>fetchPlaces(data, currentLocation))}>
+  <form onSubmit={handleSubmit(data=>{fetchPlaces(data, currentLocation)})}>
     <Field name="term"
       component={renderInput}
       placeholder="Term" />

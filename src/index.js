@@ -1,19 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore, applyMiddleware, compose } from 'redux'
 
 import App from './components/app'
 import Search from './containers/search'
 import Collection from './containers/collection'
-import reducers from './reducers'
-import promiseMiddleware from './middlewares/promise'
+import store from './store'
 
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
-
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-const store = createStore(reducers ,composeEnhancers(applyMiddleware(promiseMiddleware)))
-
 
 ReactDOM.render(
   <Provider store={store}>
