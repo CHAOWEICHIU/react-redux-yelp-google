@@ -14,12 +14,12 @@ import reducer from '../../src/reducers/places'
      expect(input).to.eql(output)
    })
    it('shoud handle FETCH_PLACES', ()=>{
-     input = reducer([], {type:FETCH_PLACES, payload:{businesses:['a','b','c']}})
+     input = reducer([], {type:FETCH_PLACES, payload:['a','b','c']})
      output = ['a','b','c']
      expect(input).to.eql(output)
    })
    it('shoud handle FETCH_PLACES', ()=>{
-     input = reducer(['a'], {type:FETCH_PLACES, payload:{businesses:['a','b','c']}})
+     input = reducer(['a'], {type:FETCH_PLACES, payload:['a','b','c']})
      output = ['a','a','b','c']
      expect(input).to.eql(output)
    })

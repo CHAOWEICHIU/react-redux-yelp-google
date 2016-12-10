@@ -53,26 +53,12 @@ describe('action creators', ()=>{
   })
 
   it('fetchPlaces()', ()=>{
-    input = actions.fetchPlaces({term:'coffee', radius:4000})
-    promise = axios.get('http://promise.com')
+    input = actions.fetchPlaces(['a','b'])
     output = {
       type: FETCH_PLACES,
-      payload: promise
+      payload: ['a','b']
     }
     expect(input).to.eql(output)
   })
-
-  xit('fetchPlaces() will return 200 and 50 businesses', (done)=>{
-    actions.fetchPlaces({radius:4000})
-      .payload
-      .then(res=>{
-        expect(res.status).to.equal(200)
-        expect(res.data.businesses.length).to.equal(50)
-        done()
-      })
-  })
-
-
-
 
 })
