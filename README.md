@@ -11,18 +11,6 @@ React, Redux, redux-form
 
 Bootstrap, front-awesome
 
+## Next Step
 
-TODO =>
-[1] my resume
-[2] http://airbnb.io/enzyme/
-[3] http://airbnb.io/enzyme/docs/api/shallow.html
-
-
-
-- redux-form
-
-  - normalize
-  - normalizePhone
-
-
-TDD
+Enzyme Test
