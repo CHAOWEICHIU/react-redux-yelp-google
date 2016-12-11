@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import { expect } from 'chai'
 import Card from '../../src/components/card'
 
-describe.only('<Card />', ()=>{
+describe('<Card />', ()=>{
   const minProps = {
     key: '22',
     business:
