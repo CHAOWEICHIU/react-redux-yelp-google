@@ -5,7 +5,7 @@ import App from '../../src/components/app'
 import Header from '../../src/components/header'
 import Footer from '../../src/containers/footer'
 
-describe.only('<App />', ()=>{
+describe('<App />', ()=>{
   it('Has <Header /> ',()=>{
     expect(
       shallow(<App />).find(Header)
