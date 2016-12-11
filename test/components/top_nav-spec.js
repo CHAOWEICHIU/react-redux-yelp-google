@@ -3,7 +3,7 @@ import { expect } from 'chai'
 import { shallow } from 'enzyme'
 import TopNav from '../../src/components/top_nav'
 
-describe.only('<TopNav />', ()=>{
+describe('<TopNav />', ()=>{
   const minProps = {
     name:'search',
     className:'good',
