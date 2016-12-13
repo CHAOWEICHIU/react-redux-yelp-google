@@ -11,7 +11,7 @@ let minProps = {
   ]
 }
 
-describe.only('<Collection />', ()=>{
+describe('<Collection />', ()=>{
   it('render 2 <Card />', ()=>{
     expect(
       shallow(<Collection {...minProps} />).find(Card).length

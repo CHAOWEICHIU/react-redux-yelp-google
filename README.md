@@ -3,6 +3,14 @@
 ## Stop And Yelp !
 This is an app that you can generate ideas for exploring new place by cooperating Google location API with Yelp API.
 
+## Useful Command
+
+npm run dev
+
+npm run test
+
+npm run test:watch
+
 ## Tech
 
 Test Driven Development -> Mocha, Chi, Enzyme
